@@ -56,7 +56,7 @@ class MainControl extends React.Component {
     this.getLastUpdate()
 
     toast.success(
-      'Welcome to Valhalla! Global Routing Service - funded by FOSSGIS e.V.',
+      'Welcome to PNM Maps! Global Routing Service - Developed by PERMODALAN NASIONAL MADANI',
       {
         position: 'bottom-center',
         autoClose: 5000,

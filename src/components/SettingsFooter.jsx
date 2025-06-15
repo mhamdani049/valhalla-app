@@ -4,21 +4,21 @@ export const SettingsFooter = () => {
   return (
     <div className="ml2 mr2">
       <span className="custom-label">
-        Calculations by{' '}
+        Dikembangkan Oleh{' '}
         <a
-          href="https://github.com/valhalla/valhalla"
+          href="https://www.pnm.co.id/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Valhalla
+          PERMODALAN NASIONAL MADANI
         </a>{' '}
-        • Visualized with{' '}
+        • Panduan Integrasi{' '}
         <a
-          href="https://github.com/gis-ops/valhalla-app/"
+          href="https://gitlab.pnm.co.id/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Valhalla App
+          Dokumentasi
         </a>
       </span>
     </div>
