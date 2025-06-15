@@ -4,7 +4,7 @@ export const SettingsFooter = () => {
   return (
     <div className="ml2 mr2">
       <span className="custom-label">
-        Dikembangkan Oleh{' '}
+        Developed by{' '}
         <a
           href="https://www.pnm.co.id/"
           target="_blank"
@@ -12,13 +12,13 @@ export const SettingsFooter = () => {
         >
           PERMODALAN NASIONAL MADANI
         </a>{' '}
-        • Panduan Integrasi{' '}
+        • Documentation{' '}
         <a
           href="https://gitlab.pnm.co.id/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Dokumentasi
+          Read
         </a>
       </span>
     </div>

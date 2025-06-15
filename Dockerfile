@@ -4,7 +4,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY . /app
 RUN npm i
 
-ENV NODE_ENV production
+ENV NODE_ENV development
 RUN npm run build
 
 # production environment

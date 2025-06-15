@@ -40,6 +40,15 @@ class MainControl extends React.Component {
     activeTab: PropTypes.number,
     showDirectionsPanel: PropTypes.bool,
     lastUpdate: PropTypes.object,
+    nodeName: PropTypes.string,
+  }
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      lastUpdate: null,
+      nodeName: 'Development',
+    }
   }
 
   async getLastUpdate() {
@@ -50,10 +59,22 @@ class MainControl extends React.Component {
     })
   }
 
+  async getEnv() {
+    let envName = this.state.nodeName
+    if (process.env.NODE_ENV === 'production') {
+      envName = 'Production'
+    }
+
+    this.setState({
+      nodeName: envName,
+    })
+  }
+
   componentDidMount = () => {
     const { dispatch } = this.props
 
     this.getLastUpdate()
+    this.getEnv()
 
     toast.success(
       'Welcome to PNM Maps! Global Routing Service - Developed by PERMODALAN NASIONAL MADANI',
@@ -268,14 +289,14 @@ class MainControl extends React.Component {
               margin: '1rem',
             }}
           >
-            Last Data Update:{' '}
-            {this.state
+            <b>{`${this.state.nodeName} Server`}</b> - Last Data Update:{' '}
+            {this.state.lastUpdate
               ? `${this.state.lastUpdate
                   .toISOString()
                   .slice(0, 10)}, ${this.state.lastUpdate
                   .toISOString()
                   .slice(11, 16)}`
-              : '0000-00-00, 00:00'}
+              : 'Loading...'}
           </div>
         </Drawer>
       </>
