@@ -172,30 +172,28 @@ class Map extends React.Component {
       })
       .addTo(this.map)
 
-    //and for the sake of advertising your company, you may add a logo to the map
-    const brand = L.control({
-      position: 'bottomleft',
-    })
-    brand.onAdd = (map) => {
-      const div = L.DomUtil.create('div', 'brand')
-      div.innerHTML =
-        '<a href="https://fossgis.de/news/2021-11-12_funding_valhalla/" target="_blank"><div class="fossgis-logo"></div></a>'
-      return div
-    }
+    // //and for the sake of advertising your company, you may add a logo to the map
+    // const brand = L.control({
+    //   position: 'bottomleft',
+    // })
+    // brand.onAdd = (map) => {
+    //   const div = L.DomUtil.create('div', 'brand')
+    //   div.innerHTML =
+    //     '<a href="https://fossgis.de/news/2021-11-12_funding_valhalla/" target="_blank"><div class="fossgis-logo"></div></a>'
+    //   return div
+    // }
+    // this.map.addControl(brand)
 
-    this.map.addControl(brand)
-
-    const valhallaBrand = L.control({
-      position: 'bottomleft',
-    })
-    valhallaBrand.onAdd = (map) => {
-      const div = L.DomUtil.create('div', 'brand')
-      div.innerHTML =
-        '<a href="https://github.com/valhalla/valhalla" target="_blank"><div class="valhalla-logo"></div></a>'
-      return div
-    }
-
-    this.map.addControl(valhallaBrand)
+    // const valhallaBrand = L.control({
+    //   position: 'bottomleft',
+    // })
+    // valhallaBrand.onAdd = (map) => {
+    //   const div = L.DomUtil.create('div', 'brand')
+    //   div.innerHTML =
+    //     '<a href="https://github.com/valhalla/valhalla" target="_blank"><div class="valhalla-logo"></div></a>'
+    //   return div
+    // }
+    // this.map.addControl(valhallaBrand)
 
     const popup = L.popup({ className: 'valhalla-popup' })
 

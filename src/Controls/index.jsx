@@ -47,7 +47,7 @@ class MainControl extends React.Component {
     super(props)
     this.state = {
       lastUpdate: null,
-      nodeName: 'Development',
+      nodeName: 'Production',
     }
   }
 
@@ -61,8 +61,8 @@ class MainControl extends React.Component {
 
   async getEnv() {
     let envName = this.state.nodeName
-    if (process.env.NODE_ENV === 'production') {
-      envName = 'Production'
+    if (process.env.REACT_APP_VALHALLA_URL.includes('development')) {
+      envName = 'Development'
     }
 
     this.setState({
