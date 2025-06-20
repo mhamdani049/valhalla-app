@@ -14,7 +14,7 @@ export const SettingsFooter = () => {
         </a>{' '}
         • Documentation{' '}
         <a
-          href="https://gitlab.pnm.co.id/"
+          href="https://pnmgroup.sharepoint.com/:w:/s/CenterOfExcellence/Ec653lysAbBMuladPwJBA_0BcuRopq5Y98d_0MMnf0HEnQ?e=b19s8A"
           target="_blank"
           rel="noopener noreferrer"
         >
