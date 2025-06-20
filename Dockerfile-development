@@ -2,8 +2,13 @@ FROM node:16.17.0-alpine AS builder
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY . /app
+
+# Copy file env-development.example ke .env
 COPY env-development.example /app/.env
-# COPY index-development.html /app/public/index.html
+
+# Ganti title di index.html
+RUN sed -i 's/<title>PNM Maps<\/title>/<title>PNM Maps - Development<\/title>/g' /app/public/index.html
+
 RUN npm i
 
 ENV NODE_ENV development
