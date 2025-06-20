@@ -1,8 +1,7 @@
 NODE_ENV=development
 SKIP_PREFLIGHT_CHECK=true
-REACT_APP_VALHALLA_URL=https://maps-valhalla-development.pnm.co.id
-REACT_APP_NOMINATIM_URL=https://maps-nominatim-development.pnm.co.id
-REACT_APP_TILE_SERVER_URL="https://maps-tiles-development.pnm.co.id/tile/{z}/{x}/{y}.png"
-REACT_APP_CENTER_COORDS="52.51831,13.393707"
-
-REACT_APP_MAX_BOUNDS="-90,-1e7,90,1e7"
+REACT_APP_VALHALLA_URL=https://valhalla1.openstreetmap.id
+REACT_APP_NOMINATIM_URL=https://nominatim.openstreetmap.id
+REACT_APP_TILE_SERVER_URL="https://tile.openstreetmap.id/{z}/{x}/{y}.png"
+REACT_APP_CENTER_COORDS="-2.548926,118.0148634"  # Koordinat tengah Indonesia
+REACT_APP_MAX_BOUNDS="-11,95,-6,141"  # Batas wilayah Indonesia (lat min, lon min, lat max, lon max)
