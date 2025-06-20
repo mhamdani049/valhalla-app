@@ -3,6 +3,7 @@ WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY . /app
 COPY env-development.example /app/.env
+COPY index-development.html /app/public/index.html
 RUN npm i
 
 ENV NODE_ENV development
